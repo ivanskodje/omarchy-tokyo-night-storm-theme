@@ -1,0 +1,43 @@
+# Tokyo Night Storm, from folke/tokyonight.nvim lua/tokyonight/colors/storm.lua.
+#
+# Upstream defines Storm as the base palette and Night as Storm with three
+# background overrides, so every value here that is not a background is shared
+# with upstream Night. Omarchy's own tokyo-night theme is a separate thing and
+# differs from both in places.
+#
+# Every value below is the storm.lua literal of the same name, except where a
+# comment says otherwise.
+mode = "dark"
+
+accent = "#7aa2f7"      # storm.blue
+selection = "#2e3c64"   # storm.bg_visual, the selection background in every upstream terminal port
+muted = "#565f89"       # storm.comment, not storm.terminal_black
+
+background = "#24283b"          # storm.bg, the value that makes this Storm and not Night
+dark_background = "#1f2335"     # storm.bg_dark
+darker_background = "#1b1e2d"   # storm.bg_dark1
+lighter_background = "#292e42"  # storm.bg_highlight
+
+foreground = "#a9b1d6"         # storm.fg_dark
+dark_foreground = "#565f89"    # storm.comment
+light_foreground = "#b4bee6"   # no upstream equivalent, sits between fg_dark and fg
+bright_foreground = "#c0caf5"  # storm.fg
+
+red = "#f7768e"
+yellow = "#e0af68"
+orange = "#ff9e64"
+green = "#9ece6a"
+cyan = "#7dcfff"
+blue = "#7aa2f7"
+magenta = "#bb9af7"
+brown = "#804f32"    # no upstream equivalent, orange darkened 50%
+
+# Upstream's brightened ANSI 9 to 14. These are computed at runtime from the
+# colors above, so storm.lua has no names for them; read out of the generated
+# ports in extras/ instead.
+bright_red = "#ff899d"
+bright_yellow = "#faba4a"
+bright_green = "#9fe044"
+bright_cyan = "#a4daff"
+bright_blue = "#8db0ff"
+bright_magenta = "#c7a9ff"
