@@ -28,6 +28,24 @@ If you ran the GTK fix, undo it before removing the theme: `bash ~/.config/omarc
 
 Add (or remove) your own to `~/.config/omarchy/backgrounds/tokyo-night-storm/` and they show up in the same background picker cycle (`Super + Ctrl + Space`).
 
+## OPTIONAL: VS Code
+
+Omarchy generates its own VS Code theme from `colors.toml`, and that template draws comments, line numbers, breadcrumbs and inactive tabs from a single key, so they all land on the same dim gray. [enkia's port](https://github.com/enkia/tokyo-night-vscode-theme) gives each of them its own value.
+
+```bash
+code --install-extension enkia.tokyo-night
+```
+
+Pick _Tokyo Night Storm_ in the theme picker (`Ctrl + K, Ctrl + T`), then stop Omarchy rewriting your choice on every theme switch:
+
+```bash
+omarchy-toggle skip-vscode-theme-changes on
+```
+
+That toggle also stops VS Code following any later Omarchy theme switch. Undo it with `omarchy-toggle skip-vscode-theme-changes off`.
+
+For the other editors Omarchy drives, the toggles are `skip-vscode-insiders-theme-changes`, `skip-codium-theme-changes` and `skip-cursor-theme-changes`.
+
 ## OPTIONAL: Files (Nautilus) and other GTK apps
 
 **Omarchy does not theme GTK apps**. Nautilus (the default file manager) takes its colors from libadwaita, which ignores the GTK theme setting by design, so it looks the same under every Omarchy theme, this one included. 
